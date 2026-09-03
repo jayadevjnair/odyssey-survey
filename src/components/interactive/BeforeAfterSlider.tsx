@@ -501,7 +501,7 @@ export function BeforeAfterSlider({
       </div>
 
       {/* Engineering Value Proposition Badges */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-4 pt-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 pt-2">
         <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-1 hover-lift">
           <div className="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center text-base mb-2">
             <FiCheckCircle />
@@ -509,16 +509,6 @@ export function BeforeAfterSlider({
           <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wide">Multi-Layered .DWG / .DXF</h4>
           <p className="text-[11px] text-slate-500 leading-snug">
             Organized in 18+ industry CAD layers (Contours, Boundary, Setbacks, Utilities).
-          </p>
-        </div>
-
-        <div className="p-4 rounded-2xl bg-white border border-slate-200/90 shadow-sm space-y-1 hover-lift">
-          <div className="w-8 h-8 rounded-lg bg-teal-50 text-teal-700 flex items-center justify-center text-base mb-2">
-            <FiActivity />
-          </div>
-          <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wide">3D BIM & Revit Surface</h4>
-          <p className="text-[11px] text-slate-500 leading-snug">
-            Civil 3D TIN digital elevation terrain models for instant earthwork cut/fill estimation.
           </p>
         </div>
 
