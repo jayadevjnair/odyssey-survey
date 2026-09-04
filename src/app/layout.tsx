@@ -111,6 +111,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
       <head>
         <link rel="canonical" href="https://odysseysurvey.com" />
+        <link rel="icon" type="image/png" href="/favicon.png" />
       </head>
       <body className="min-h-screen bg-white text-slate-900 antialiased flex flex-col selection:bg-emerald-600 selection:text-white">
         <GoogleAnalytics />
