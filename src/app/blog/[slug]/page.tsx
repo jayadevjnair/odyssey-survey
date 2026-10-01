@@ -28,6 +28,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${post.title} | Odyssey Survey Guide`,
     description: post.excerpt,
     keywords: post.tags,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -199,9 +202,7 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
             }
 
             return (
-              <p key={idx} className="text-slate-700 leading-relaxed">
-                {paragraph}
-              </p>
+              <p key={idx} className="text-slate-700 leading-relaxed" dangerouslySetInnerHTML={{ __html: paragraph }} />
             );
           })}
         </div>

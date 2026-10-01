@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { SERVICES_DATA, SERVICE_AREAS, BLOG_POSTS } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://odysseysurvey.com";
+  const baseUrl = "https://www.odysseysurvey.com";
   const lastModified = new Date();
 
   // Core Static Routes

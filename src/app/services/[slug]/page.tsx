@@ -56,6 +56,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       "Licensed Land Surveyor Kerala",
       "AutoCAD Land Survey"
     ],
+    alternates: {
+      canonical: `/services/${service.slug}`,
+    },
     openGraph: {
       title: service.metaTitle,
       description: service.metaDescription,
@@ -245,7 +248,7 @@ export default async function ServiceDetailPage({ params }: PageProps) {
           </h2>
           <div className="space-y-4 text-slate-700 leading-relaxed text-base">
             {service.fullOverview.map((paragraph, pIdx) => (
-              <p key={pIdx}>{paragraph}</p>
+              <p key={pIdx} dangerouslySetInnerHTML={{ __html: paragraph }} />
             ))}
           </div>
         </section>

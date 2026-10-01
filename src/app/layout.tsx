@@ -8,6 +8,7 @@ import { LocalBusinessSchema } from "@/components/seo/LocalBusinessSchema";
 import { GoogleAnalytics } from "@/components/seo/GoogleAnalytics";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { ScrollProgressBar } from "@/components/ui/ScrollReveal";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -29,10 +30,10 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://odysseysurvey.com"),
+  metadataBase: new URL("https://www.odysseysurvey.com"),
   title: {
-    default: "Odyssey Survey | Precision Digital Land Surveying & GPS Services",
-    template: "%s | Odyssey Survey",
+    default: "Land Surveying Services in Kerala | Odyssey Survey",
+    template: "%s",
   },
   description: "Enterprise-grade digital land surveying, DGPS RTK satellite positioning, 3D topographical contour mapping, building setting out & boundary demarcation. Licensed surveyors with 24-hr turnaround.",
   keywords: [
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://odysseysurvey.com",
+    url: "https://www.odysseysurvey.com",
     siteName: "Odyssey Survey",
     title: "Odyssey Survey | Precision Digital Land Surveying",
     description: "Centimeter-precision land surveying, DGPS RTK, 3D topographic contour mapping & legal boundary verification.",
@@ -100,6 +101,9 @@ export const metadata: Metadata = {
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || "google-site-verification-odyssey-survey",
   },
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -109,12 +113,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <head>
-        <link rel="canonical" href="https://odysseysurvey.com" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
-      </head>
       <body className="min-h-screen bg-white text-slate-900 antialiased flex flex-col selection:bg-emerald-600 selection:text-white">
         <GoogleAnalytics />
+        <Analytics />
         <ScrollProgressBar />
         <LocalBusinessSchema />
         <Header />

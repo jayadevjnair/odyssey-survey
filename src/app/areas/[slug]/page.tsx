@@ -38,6 +38,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       `Land Surveyor near me ${area.name}`,
       ...area.subDistricts.map((d) => `Land Survey in ${d}`)
     ],
+    alternates: {
+      canonical: `/areas/${area.slug}`,
+    },
     openGraph: {
       title: area.metaTitle,
       description: area.metaDescription,
@@ -214,9 +217,7 @@ export default async function AreaDetailPage({ params }: PageProps) {
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
             Comprehensive Digital Surveying in {area.name}
           </h2>
-          <p className="text-slate-700 leading-relaxed text-base">
-            {area.overview} Our local survey engineers possess deep familiarity with {area.name}&apos;s distinctive geodetic topography, municipal masterplans, and revenue department cadastre. {area.localRegulations}
-          </p>
+          <p className="text-slate-700 leading-relaxed text-base" dangerouslySetInnerHTML={{ __html: `${area.overview} Our local survey engineers possess deep familiarity with ${area.name}'s distinctive geodetic topography, municipal masterplans, and revenue department cadastre. ${area.localRegulations}` }} />
         </section>
 
         {/* Sub-Districts Grid */}

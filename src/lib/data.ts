@@ -290,7 +290,7 @@ export const SERVICES_DATA: Record<string, ServiceData> = {
         a: "Significant trees are plotted with trunk location, canopy radius, and ground level. Utilities like manholes include cover level and pipe invert depth where accessible."
       }
     ],
-    relatedServices: ["contour-survey", "building-setting-out", "gps-survey"]
+    relatedServices: ["contour-survey", "construction-setting-out", "gps-survey"]
   },
 
   "land-survey": {
@@ -482,7 +482,7 @@ export const SERVICES_DATA: Record<string, ServiceData> = {
         a: "Civil engineers import our 3D contour surface into CAD software to simulate proposed building pad levels and automatically calculate the exact volume of soil that needs to be cut from high points or filled into depressions."
       }
     ],
-    relatedServices: ["topographical-survey", "building-setting-out", "gps-survey"]
+    relatedServices: ["topographical-survey", "construction-setting-out", "gps-survey"]
   },
 
   "subdivision-survey": {
@@ -490,9 +490,9 @@ export const SERVICES_DATA: Record<string, ServiceData> = {
     title: "Land Plot Subdivision & Masterplan Survey",
     shortTitle: "Subdivision Survey",
     subtitle: "Precision parcel partitioning, layout plotting, road right-of-way demarcation, and municipal approval layouts.",
-    metaTitle: "Land Subdivision & Plot Partition Survey | Odyssey Surveyors",
+    metaTitle: "Land Subdivision Survey in Kerala | Odyssey Survey",
     metaDescription: "Professional land subdivision & layout partitioning surveys. Masterplan plot splitting, road network setting, and legal revenue partition documentation.",
-    h1: "Land Plot Subdivision & Layout Partitioning Survey Services",
+    h1: "Land Subdivision Survey in Kerala",
     iconName: "FiMaximize",
     turnaroundTime: "3 - 5 Days",
     accuracy: "±2mm Plot Corner Tolerance",
@@ -577,7 +577,7 @@ export const SERVICES_DATA: Record<string, ServiceData> = {
         a: "We mark plot corners with high-visibility steel rebar pins, boundary stones, or concrete monuments based on the client's preference, allowing buyers and contractors to immediately identify their property."
       }
     ],
-    relatedServices: ["land-survey", "boundary-refixing", "building-setting-out"]
+    relatedServices: ["land-survey", "boundary-refixing", "construction-setting-out"]
   },
 
   "boundary-refixing": {
@@ -673,17 +673,17 @@ export const SERVICES_DATA: Record<string, ServiceData> = {
         a: "Please keep copies of your registered sale deed, title sketch, property tax receipts, and any previous survey drawings available. It is also good practice to inform neighboring landowners of the scheduled survey date."
       }
     ],
-    relatedServices: ["land-survey", "building-setting-out", "subdivision-survey"]
+    relatedServices: ["land-survey", "construction-setting-out", "subdivision-survey"]
   },
 
-  "building-setting-out": {
-    slug: "building-setting-out",
-    title: "Building Setting Out",
-    shortTitle: "Building Setting Out",
+  "construction-setting-out": {
+    slug: "construction-setting-out",
+    title: "Construction Setting Out",
+    shortTitle: "Construction Setting Out",
     subtitle: "Precision transfer of architectural blueprints to ground: column centers, pile locations, grid lines, and foundation benchmarks.",
-    metaTitle: "Building Setting Out & Construction Grid Layout Services",
+    metaTitle: "Construction Setting Out Services in Kerala",
     metaDescription: "Construction layout & building setting out services. Transfer CAD architectural drawings to site: grid lines, pile points, column centers & level datum.",
-    h1: "Building Setting Out Survey Services",
+    h1: "Construction Setting Out Services in Kerala",
     iconName: "FiGrid",
     turnaroundTime: "Same Day / Next Day Mobilization",
     accuracy: "±1mm Sub-Millimeter Construction Tolerance",
@@ -868,9 +868,9 @@ export const BLOG_POSTS: BlogPost[] = [
     ]
   },
   {
-    slug: "dgps-rtk-vs-total-station-accuracy-comparison",
-    title: "DGPS & RTK vs Traditional Total Station: Accuracy & Speed Comparison",
-    metaTitle: "DGPS / RTK vs Total Station: Accuracy, Speed & Cost Compared",
+    slug: "dgps-vs-rtk",
+    title: "DGPS vs RTK: What's the Difference?",
+    metaTitle: "DGPS vs RTK: What's the Difference? | Odyssey Survey",
     metaDescription: "Comprehensive comparison between DGPS (RTK GNSS) and Electronic Total Stations. When to use satellite positioning vs optical laser measurement on site.",
     excerpt: "Explore how satellite DGPS and optical Total Stations compare in accuracy, speed, line-of-sight requirements, and cost for small and large-scale land surveys.",
     category: "Survey Technology",
@@ -1115,7 +1115,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     completedProjects: 410,
     localRegulations: "Certified for Pala Municipality building permits, KPBR/KMBR compliance, and Meenachil Taluk revenue sketch demarcation.",
     geoCenter: { lat: 9.7126, lng: 76.6833 },
-    popularServices: ["building-setting-out", "topographical-survey", "contour-survey", "subdivision-survey"]
+    popularServices: ["construction-setting-out", "topographical-survey", "contour-survey", "subdivision-survey"]
   },
   {
     slug: "kottayam-central",
@@ -1137,10 +1137,10 @@ export const SERVICE_AREAS: ServiceArea[] = [
     slug: "pathanamthitta-thiruvalla",
     name: "Pathanamthitta & Thiruvalla",
     region: "Kerala",
-    metaTitle: "Land Survey in Pathanamthitta & Thiruvalla | Certified Surveyors",
+    metaTitle: "Land Surveyor in Pathanamthitta & Thiruvalla | Odyssey Survey",
     metaDescription: "Professional digital land survey in Pathanamthitta, Thiruvalla, Adoor, Ranni & Kozhencherry. Boundary demarcation, DGPS & contour mapping.",
     h1: "Topographic & Cadastral Land Survey in Pathanamthitta",
-    overview: "Supporting NRI property investors, commercial developers, and infrastructure projects across Thiruvalla town, Pathanamthitta headquarters, Adoor, and Ranni hill tracts.",
+    overview: "Supporting NRI property investors, commercial developers, and infrastructure projects across Thiruvalla town, <a href='/areas/pathanamthitta-thiruvalla' class='text-emerald-600 hover:underline'>Pathanamthitta headquarters</a>, Adoor, and Ranni hill tracts.",
     subDistricts: ["Pathanamthitta Town", "Thiruvalla", "Adoor", "Ranni", "Kozhencherry", "Konni", "Mallappally", "Pandalam", "Kumbanad"],
     turnaroundTime: "24 - 48 Hours",
     activeCrews: 6,
@@ -1163,7 +1163,7 @@ export const SERVICE_AREAS: ServiceArea[] = [
     completedProjects: 350,
     localRegulations: "Full compliance with Kollam Municipal Corporation, CRZ coastal regulations, and District Survey Office demarcation standards.",
     geoCenter: { lat: 8.8932, lng: 76.6141 },
-    popularServices: ["gps-survey", "topographical-survey", "building-setting-out", "subdivision-survey"]
+    popularServices: ["gps-survey", "topographical-survey", "construction-setting-out", "subdivision-survey"]
   },
   {
     slug: "changanassery-kuttanad",

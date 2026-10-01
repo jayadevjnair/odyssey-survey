@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://odysseysurvey.com/sitemap.xml",
+    sitemap: "https://www.odysseysurvey.com/sitemap.xml",
   };
 }

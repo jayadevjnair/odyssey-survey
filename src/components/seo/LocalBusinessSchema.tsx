@@ -1,7 +1,7 @@
 import { SERVICE_AREAS, SERVICES_DATA } from "@/lib/data";
 
 export function LocalBusinessSchema() {
-  const baseUrl = "https://odysseysurvey.com";
+  const baseUrl = "https://www.odysseysurvey.com";
 
   const areaServedList = SERVICE_AREAS.map((area) => ({
     "@type": "City",
