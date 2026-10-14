@@ -3,49 +3,53 @@ import { SERVICES_DATA, SERVICE_AREAS, BLOG_POSTS } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://www.odysseysurvey.com";
-  const lastModified = new Date();
+  // Use stable dates — avoids marking every page as "modified today" on each deploy
+  const coreDate = new Date("2026-10-01");
+  const serviceDate = new Date("2026-10-01");
+  const areaDate = new Date("2026-10-01");
+  const blogDate = new Date("2026-10-01");
 
   // Core Static Routes
   const staticRoutes: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified,
+      lastModified: coreDate,
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified,
+      lastModified: coreDate,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/services`,
-      lastModified,
+      lastModified: coreDate,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/areas`,
-      lastModified,
+      lastModified: coreDate,
       changeFrequency: "weekly",
       priority: 0.9,
     },
     {
       url: `${baseUrl}/projects`,
-      lastModified,
+      lastModified: coreDate,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified,
+      lastModified: coreDate,
       changeFrequency: "weekly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified,
+      lastModified: coreDate,
       changeFrequency: "monthly",
       priority: 0.9,
     },
@@ -54,23 +58,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 7 Dedicated Service Pages
   const serviceRoutes: MetadataRoute.Sitemap = Object.values(SERVICES_DATA).map((srv) => ({
     url: `${baseUrl}/services/${srv.slug}`,
-    lastModified,
+    lastModified: serviceDate,
     changeFrequency: "weekly",
     priority: 0.9,
   }));
 
-  // 6 Regional Service Area Pages
+  // Regional Service Area Pages
   const areaRoutes: MetadataRoute.Sitemap = SERVICE_AREAS.map((area) => ({
     url: `${baseUrl}/areas/${area.slug}`,
-    lastModified,
+    lastModified: areaDate,
     changeFrequency: "weekly",
     priority: 0.9,
   }));
 
-  // 10 SEO Blog Article Pages
+  // SEO Blog Article Pages
   const blogRoutes: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified,
+    lastModified: blogDate,
     changeFrequency: "monthly",
     priority: 0.7,
   }));

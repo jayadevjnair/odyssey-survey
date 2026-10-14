@@ -29,12 +29,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     description: post.excerpt,
     keywords: post.tags,
     alternates: {
-      canonical: `/blog/${post.slug}`,
+      canonical: `https://www.odysseysurvey.com/blog/${post.slug}`,
     },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `https://odysseysurvey.com/blog/${post.slug}`,
+      url: `https://www.odysseysurvey.com/blog/${post.slug}`,
       type: "article",
       publishedTime: post.publishDate,
       authors: [post.author.name],
@@ -63,7 +63,7 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
     "@type": "Article",
     "headline": post.title,
     "description": post.excerpt,
-    "image": ["https://odysseysurvey.com/equipment.png"],
+    "image": ["https://www.odysseysurvey.com/equipment.png"],
     "datePublished": "2026-01-15T08:00:00+05:30",
     "dateModified": "2026-02-01T10:00:00+05:30",
     "author": {
@@ -80,12 +80,12 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
       "name": "Odyssey Survey",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://odysseysurvey.com/equipment.png",
+        "url": "https://www.odysseysurvey.com/odyssey-logo.png",
       },
     },
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `https://odysseysurvey.com/blog/${post.slug}`,
+      "@id": `https://www.odysseysurvey.com/blog/${post.slug}`,
     },
   };
 
@@ -97,19 +97,19 @@ export default async function BlogPostDetailPage({ params }: PageProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://odysseysurvey.com",
+        "item": "https://www.odysseysurvey.com",
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Blog",
-        "item": "https://odysseysurvey.com/blog",
+        "item": "https://www.odysseysurvey.com/blog",
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": post.title,
-        "item": `https://odysseysurvey.com/blog/${post.slug}`,
+        "item": `https://www.odysseysurvey.com/blog/${post.slug}`,
       },
     ],
   };

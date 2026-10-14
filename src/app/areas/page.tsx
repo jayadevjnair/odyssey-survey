@@ -12,6 +12,14 @@ import { SERVICE_AREAS } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Service Areas in Kerala | Licensed Land Surveyors in Kottayam, Pathanamthitta & Kollam",
   description: "Find licensed digital land surveyors in Kottayam, Pala, Ponkunnam, Pathanamthitta, Thiruvalla, and Kollam. RTK DGPS, total station, and 3D contour surveys with 24-hour on-site mobilization.",
+  alternates: {
+    canonical: "https://www.odysseysurvey.com/areas",
+  },
+  openGraph: {
+    title: "Service Areas in Kerala | Odyssey Survey",
+    description: "Find licensed digital land surveyors in Kottayam, Pala, Ponkunnam, Pathanamthitta, Thiruvalla, and Kollam. RTK DGPS, total station, and 3D contour surveys.",
+    url: "https://www.odysseysurvey.com/areas",
+  },
 };
 
 export default function AreasHubPage() {

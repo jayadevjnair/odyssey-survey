@@ -27,8 +27,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const area = SERVICE_AREAS.find((a) => a.slug === slug);
   if (!area) return { title: "Area Not Found" };
 
+  const cleanTitle = area.metaTitle.replace(/\s*\|\s*Odyssey Survey.*$/i, "");
+
   return {
-    title: area.metaTitle,
+    title: cleanTitle,
     description: area.metaDescription,
     keywords: [
       `Land Survey in ${area.name}`,
@@ -39,12 +41,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       ...area.subDistricts.map((d) => `Land Survey in ${d}`)
     ],
     alternates: {
-      canonical: `/areas/${area.slug}`,
+      canonical: `https://www.odysseysurvey.com/areas/${area.slug}`,
     },
     openGraph: {
       title: area.metaTitle,
       description: area.metaDescription,
-      url: `https://odysseysurvey.com/areas/${area.slug}`,
+      url: `https://www.odysseysurvey.com/areas/${area.slug}`,
       images: ["/equipment.png"],
     },
   };
@@ -98,19 +100,19 @@ export default async function AreaDetailPage({ params }: PageProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://odysseysurvey.com"
+        "item": "https://www.odysseysurvey.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Service Areas",
-        "item": "https://odysseysurvey.com/areas"
+        "item": "https://www.odysseysurvey.com/areas"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": area.name,
-        "item": `https://odysseysurvey.com/areas/${area.slug}`
+        "item": `https://www.odysseysurvey.com/areas/${area.slug}`
       }
     ]
   };

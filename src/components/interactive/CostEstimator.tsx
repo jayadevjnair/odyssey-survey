@@ -69,6 +69,7 @@ export function CostEstimator() {
         turnaroundDays = 1;
         break;
       case "building-setting-out":
+      case "construction-setting-out":
         baseRatePerAcre = 14000;
         baseMinFee = 18000;
         turnaroundDays = 1;
@@ -138,7 +139,7 @@ export function CostEstimator() {
               <option value="contour-survey">Contour Elevation & Slope Topography</option>
               <option value="subdivision-survey">Land Plot Subdivision & Masterplan Layout</option>
               <option value="boundary-refixing">Boundary Refixing & Demarcation Pegging</option>
-              <option value="building-setting-out">Building Setting Out</option>
+              <option value="construction-setting-out">Building & Construction Setting Out</option>
             </select>
           </div>
 

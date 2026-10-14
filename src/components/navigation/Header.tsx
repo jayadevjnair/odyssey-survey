@@ -29,6 +29,7 @@ const serviceIcons: Record<string, React.ComponentType<{ className?: string }>> 
   "contour-survey": FiLayers,
   "subdivision-survey": FiMaximize,
   "boundary-refixing": FiCrosshair,
+  "construction-setting-out": FiGrid,
   "building-setting-out": FiGrid,
 };
 

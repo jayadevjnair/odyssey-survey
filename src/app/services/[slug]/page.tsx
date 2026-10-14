@@ -27,7 +27,7 @@ const serviceIcons: Record<string, React.ComponentType<{ className?: string }>> 
   "contour-survey": FiLayers,
   "subdivision-survey": FiMaximize,
   "boundary-refixing": FiCrosshair,
-  "building-setting-out": FiGrid,
+  "construction-setting-out": FiGrid,
 };
 
 interface PageProps {
@@ -43,8 +43,10 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const service = SERVICES_DATA[slug];
   if (!service) return { title: "Service Not Found" };
 
+  const cleanTitle = service.metaTitle.replace(/\s*\|\s*Odyssey Survey.*$/i, "");
+
   return {
-    title: service.metaTitle,
+    title: cleanTitle,
     description: service.metaDescription,
     keywords: [
       service.title,
@@ -57,12 +59,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       "AutoCAD Land Survey"
     ],
     alternates: {
-      canonical: `/services/${service.slug}`,
+      canonical: `https://www.odysseysurvey.com/services/${service.slug}`,
     },
     openGraph: {
       title: service.metaTitle,
       description: service.metaDescription,
-      url: `https://odysseysurvey.com/services/${service.slug}`,
+      url: `https://www.odysseysurvey.com/services/${service.slug}`,
       images: ["/equipment.png"],
     },
   };
@@ -88,8 +90,8 @@ export default async function ServiceDetailPage({ params }: PageProps) {
     "provider": {
       "@type": "ProfessionalService",
       "name": "Odyssey Survey",
-      "url": "https://odysseysurvey.com",
-      "telephone": "+91-98765-43210",
+      "url": "https://www.odysseysurvey.com",
+      "telephone": "+91 79947 76610",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Odyssey Survey Engineering Hub, Near Private Bus Stand, NH 183, Ponkunnam",
@@ -121,19 +123,19 @@ export default async function ServiceDetailPage({ params }: PageProps) {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://odysseysurvey.com"
+        "item": "https://www.odysseysurvey.com"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://odysseysurvey.com/services"
+        "item": "https://www.odysseysurvey.com/services"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": service.title,
-        "item": `https://odysseysurvey.com/services/${service.slug}`
+        "item": `https://www.odysseysurvey.com/services/${service.slug}`
       }
     ]
   };

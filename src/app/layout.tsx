@@ -33,7 +33,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.odysseysurvey.com"),
   title: {
     default: "Land Surveying Services in Kerala | Odyssey Survey",
-    template: "%s",
+    template: "%s | Odyssey Survey",
+  },
+  alternates: {
+    canonical: "https://www.odysseysurvey.com",
   },
   description: "Enterprise-grade digital land surveying, DGPS RTK satellite positioning, 3D topographical contour mapping, building setting out & boundary demarcation. Licensed surveyors with 24-hr turnaround.",
   keywords: [
